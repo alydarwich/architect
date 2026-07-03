@@ -1,0 +1,150 @@
+.section_hero {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.section_hero .padding-global {
+  height: 100%;
+}
+
+.hero_container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.hero_content-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  text-align: right;
+}
+
+.hero_title {
+  text-align: right;
+}
+
+.hero_paragraph {
+  width: 40ch;
+  max-width: 90vw;
+  color: var(--secondary-color);
+  text-align: right;
+  font-family: var(--paragraph);
+  overflow: hidden;
+}
+
+.hero_paragraph .line {
+  overflow: hidden;
+  padding-bottom: 0.1rem;
+}
+
+.hero_title .line {
+  overflow: hidden;
+  padding-bottom: 0.4rem;
+}
+
+.hero_primary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: var(--corner-radius);
+  background-color: var(--secondary-color);
+  padding: 0.5em 0.5em 0.5em 1.6rem;
+  font-size: 1.4rem;
+  flex-direction: row-reverse;
+}
+
+.primary-button_icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 3rem;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.primary-button_arrow-icon {
+  width: 1.6rem;
+  filter: invert(1);
+}
+
+.primary-button_text {
+  color: var(--primary-color);
+  font-family: var(--h1);
+  font-size: var(--button-text);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.hero_logo {
+  position: absolute;
+  z-index: 5;
+  top: 5rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 11rem;
+  height: fit-content;
+}
+
+.hero_image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.hero_bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero_bg-image-mobile {
+  display: none;
+}
+
+.hero_bg-image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  height: 100%;
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0) 57%);
+}
+
+@media screen and (max-width: 767px) {
+  .hero_bg-image-desktop {
+    display: none;
+  }
+
+  .hero_bg-image-mobile {
+    display: block;
+  }
+
+  .hero_paragraph {
+    width: 30ch;
+  }
+}

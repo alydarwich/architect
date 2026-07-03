@@ -1,0 +1,221 @@
+.section_expertise {
+  position: relative;
+  width: 100%;
+  min-height: 300vh;
+  margin-top: -100vh;
+  margin-bottom: -100vh;
+  background-color: var(--secondary-color);
+}
+
+.expertise_wrapper {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.expertise_grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.expertise_left-col-wrapper {
+  position: relative;
+  height: 32rem;
+  max-height: 60vh;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.expertise_left-col-wrapper .heading-style-h2 {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+}
+
+.expertise_image-stack {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.expertise_list-item-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+
+.expertise_list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise_list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.1rem 0;
+  cursor: pointer;
+}
+
+.expertise_list-item-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.expertise_list-item-text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+
+.expertise_list-item-number {
+  align-self: flex-start;
+  color: var(--primary-color);
+  font-family: var(--paragraph);
+  font-size: 1.4rem;
+}
+
+.expertise_list-item-text {
+  color: var(--primary-color);
+  font-family: var(--h1);
+  font-size: 1.8rem;
+  font-weight: 600;
+  transition: opacity 0.4s ease;
+}
+
+.expertise-list-item-line-wrapper {
+  position: relative;
+}
+
+.expertise_list-item-line {
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.3;
+}
+
+.expertise_list-item-line-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--primary-color);
+  transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.expertise_bg-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.expertise_bg-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  opacity: 0.5;
+}
+
+/* mobile per-item image is hidden on desktop (cross-fade stack is used instead) */
+.expertise_list-item-mobile-image {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  /* Unwind the pinned/negative-margin desktop choreography into a plain stack. */
+  .section_expertise {
+    position: static;
+    min-height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .expertise_wrapper {
+    position: static;
+    height: auto;
+  }
+
+  .expertise_wrapper .padding-section-large {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .expertise_grid-container {
+    display: block;
+  }
+
+  .expertise_left-col-wrapper {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 2.5rem;
+  }
+
+  .expertise_left-col-wrapper .heading-style-h2 {
+    padding: 0;
+  }
+
+  .expertise_image-stack,
+  .expertise_left-col-wrapper .expertise_list-item-image {
+    display: none;
+  }
+
+  .expertise_list-item {
+    padding: 1.75rem 0;
+    cursor: default;
+  }
+
+  .expertise_list-item-text-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding-left: 0;
+  }
+
+  .expertise_list-item-number {
+    font-size: 1.5rem;
+  }
+
+  .expertise_list-item-text {
+    font-size: 2.4rem;
+    opacity: 1 !important;
+  }
+
+  .expertise_list-item-line-overlay {
+    width: 0 !important;
+  }
+
+  .expertise_list-item-line {
+    opacity: 0.4;
+  }
+
+  .expertise_list-item-mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .expertise_bg-image {
+    height: auto;
+    width: 140%;
+    top: 0;
+  }
+}

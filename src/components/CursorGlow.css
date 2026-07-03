@@ -1,0 +1,15 @@
+.global_bg-circle-interaction {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 20rem;
+  height: 20rem;
+  margin-left: -10rem;
+  margin-top: -10rem;
+  border-radius: 100%;
+  background-color: var(--accent-color);
+  filter: blur(40px);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}

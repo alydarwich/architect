@@ -1,0 +1,215 @@
+:root {
+  --primary-color: #2c2c2c;
+  --secondary-color: #fff;
+  --background-color-gray: #2c2c2c;
+  --accent-color: #a95a58;
+  --black-color: #000;
+  --padding-global: 2.5rem;
+  --corner-radius: 2.5rem;
+  --button-text: 1.2rem;
+  --h1: 'Poppins', sans-serif;
+  --paragraph: 'Montserrat', sans-serif;
+
+  /* fluid root font-size, mirrors the reference site's clamp-via-vw trick */
+  font-size: calc(0.625rem + 0.41667vw);
+}
+
+@media screen and (max-width: 1440px) {
+  :root {
+    font-size: calc(0.8127rem + 0.2081vw);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: calc(0.85rem + 0.55vw);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  :root {
+    font-size: calc(0.7495rem + 0.8368vw);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html.lenis {
+  height: auto;
+}
+
+html.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+html.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: var(--paragraph);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid rgba(44, 44, 44, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(169, 90, 88);
+}
+
+/* ---------- shared layout utilities ---------- */
+
+.padding-global {
+  width: 100%;
+  padding-left: var(--padding-global);
+  padding-right: var(--padding-global);
+}
+
+.container-large {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.padding-section-small {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.padding-section-large {
+  width: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.spacer-xsmall {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.spacer-small {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.spacer-medium {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.spacer-large {
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.spacer-xlarge {
+  width: 100%;
+  padding-top: 4rem;
+}
+
+.spacer-huge {
+  width: 100%;
+  padding-top: 6rem;
+}
+
+.heading-style-h1 {
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  font-family: var(--h1);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+}
+
+.heading-style-h2 {
+  color: var(--primary-color);
+  font-family: var(--h1);
+  font-size: 6.25rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+}
+
+.heading-style-h2.text-color-white {
+  color: var(--secondary-color);
+}
+
+.heading-style-h2.has-shadow {
+  text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.text-color-white {
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .heading-style-h1 {
+    font-size: 2.4rem;
+  }
+
+  .heading-style-h2 {
+    font-size: 3.5rem;
+  }
+
+  .padding-section-large {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  :root {
+    --padding-global: 1.25rem;
+  }
+}
