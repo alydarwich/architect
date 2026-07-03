@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap.js';
 import './Formula.css';
 
@@ -8,7 +8,7 @@ export default function Formula() {
   const subtextRefs = useRef([]);
   const bgRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       // Scroll-driven reveal only on desktop; mobile is a plain stacked column.
       const mm = gsap.matchMedia();
@@ -114,6 +114,8 @@ export default function Formula() {
                   src="/svg/formula-white.svg"
                   alt="SITE formula"
                   className="formula-formula-img"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

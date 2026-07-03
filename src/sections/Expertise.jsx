@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap, ScrollTrigger } from '../lib/gsap.js';
 import './Expertise.css';
 
@@ -15,7 +15,7 @@ export default function Expertise() {
   const [activeIndex, setActiveIndex] = useState(0);
   const hoverIndexRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       // Scroll-driven active step only on desktop; mobile is a plain stacked list.
       const mm = gsap.matchMedia();
@@ -116,6 +116,8 @@ export default function Expertise() {
           src="/svg/bg-pattern-half.svg"
           alt="background line pattern"
           className="expertise_bg-image"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </div>

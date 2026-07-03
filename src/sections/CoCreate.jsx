@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap, ScrollTrigger } from '../lib/gsap.js';
 import './CoCreate.css';
 
@@ -8,7 +8,7 @@ export default function CoCreate() {
   const imageRef = useRef(null);
   const curtainRefs = useRef([]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const curtains = curtainRefs.current;
 

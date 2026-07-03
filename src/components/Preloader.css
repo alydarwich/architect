@@ -30,6 +30,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 5px;
+  height: 500px;
   background-color: var(--accent-color);
+  /* Revealed via a composited transform (not height) so the growth does not
+     trigger per-frame layout shifts / CLS. */
+  transform: scaleY(0);
+  transform-origin: center bottom;
+  will-change: transform;
 }

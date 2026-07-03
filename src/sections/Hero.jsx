@@ -87,24 +87,23 @@ export default function Hero() {
           </div>
 
           <div className="hero_image-wrapper" ref={bgWrapperRef}>
-            <img
-              src="/images/hero.webp"
-              alt="house with garden at night"
-              className="hero_bg-image hero_bg-image-desktop"
-              fetchPriority="high"
-              decoding="async"
-              width="1600"
-              height="900"
-            />
-            <img
-              src="/images/hero-mobile.webp"
-              alt="House in forest"
-              className="hero_bg-image hero_bg-image-mobile"
-              fetchPriority="high"
-              decoding="async"
-              width="828"
-              height="1104"
-            />
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcSet="/images/hero-mobile.webp"
+                width="828"
+                height="1104"
+              />
+              <img
+                src="/images/hero.webp"
+                alt="house with garden at night"
+                className="hero_bg-image"
+                fetchPriority="high"
+                decoding="async"
+                width="1600"
+                height="900"
+              />
+            </picture>
             <div className="hero_bg-image-overlay" />
           </div>
         </div>

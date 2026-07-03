@@ -39,8 +39,8 @@ export default function Preloader() {
       },
     });
 
-    tl.to(barRef.current, {
-      height: 500,
+    tl.set(barRef.current, { scaleY: 0, y: 0 }).to(barRef.current, {
+      scaleY: 1,
       y: -50,
       duration: 1,
       ease: 'power2.in',

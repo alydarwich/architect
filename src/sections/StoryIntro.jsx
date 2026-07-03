@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import SplitType from 'split-type';
 import { gsap, ScrollTrigger } from '../lib/gsap.js';
 import CursorGlow from '../components/CursorGlow.jsx';
@@ -8,7 +8,7 @@ export default function StoryIntro() {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const split = new SplitType(titleRef.current, { types: 'lines' });
 
@@ -54,6 +54,8 @@ export default function StoryIntro() {
           src="/svg/bg-pattern-half.svg"
           alt="background line pattern"
           className="story_bg-image"
+          loading="lazy"
+          decoding="async"
         />
         <div className="story_bg-image-overlay" />
       </div>

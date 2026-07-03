@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap.js';
 import './Storytelling.css';
 
@@ -7,7 +7,7 @@ export default function Storytelling() {
   const headingRef = useRef(null);
   const subtextRefs = useRef([]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         headingRef.current,
@@ -53,6 +53,8 @@ export default function Storytelling() {
           src="/svg/bg-pattern-white-lines.svg"
           alt="background line pattern"
           className="storytelling_bg-image"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <div className="padding-global">

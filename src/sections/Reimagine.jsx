@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap.js';
 import CursorGlow from '../components/CursorGlow.jsx';
 import './Reimagine.css';
@@ -7,7 +7,7 @@ export default function Reimagine() {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         headingRef.current,
@@ -37,6 +37,8 @@ export default function Reimagine() {
           src="/svg/bg-pattern-half.svg"
           alt="background line pattern"
           className="reimagine_bg-image"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <div className="padding-global">
