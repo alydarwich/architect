@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from '../lib/gsap.js';
 import { completeIntro, isIntroResolved } from '../lib/introSignal.js';
 import { useLenis } from '../lib/SmoothScroll.jsx';
@@ -10,6 +10,11 @@ export default function Preloader() {
   const ranRef = useRef(false);
   const lenisRef = useRef(null);
   const lenis = useLenis();
+
+  // Decided once, at mount: if the shared intro signal is already resolved we
+  // are returning to home from another route — the reveal has played before, so
+  // render nothing rather than a fixed white overlay that would cover the page.
+  const [skip] = useState(() => isIntroResolved());
 
   // Keep the freshest lenis instance available to the (run-once) timeline.
   lenisRef.current = lenis;
@@ -25,7 +30,7 @@ export default function Preloader() {
     lenisRef.current?.stop();
 
     const tl = gsap.timeline({
-      delay: 0.2,
+      delay: 0.1,
       onComplete: () => {
         if (rootRef.current) gsap.set(rootRef.current, { display: 'none' });
         document.documentElement.style.overflow = '';
@@ -37,18 +42,20 @@ export default function Preloader() {
     tl.to(barRef.current, {
       height: 500,
       y: -50,
-      duration: 1.5,
+      duration: 1,
       ease: 'power2.in',
     }).to(
       rootRef.current,
       {
         yPercent: -100,
-        duration: 1,
+        duration: 0.7,
         ease: 'power2.inOut',
       },
-      '-=0.6',
+      '-=0.5',
     );
   }, []);
+
+  if (skip) return null;
 
   return (
     <div className="pre-loader" ref={rootRef}>

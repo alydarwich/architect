@@ -17,7 +17,6 @@ export default function Hero() {
       const titleSplit = new SplitType(titleRef.current, { types: 'lines,words' });
       const paragraphSplit = new SplitType(paragraphRef.current, { types: 'lines,words' });
 
-      gsap.set(bgWrapperRef.current, { opacity: 0 });
       gsap.set(logoRef.current, { y: 10, opacity: 0 });
       gsap.set(titleSplit.words, { yPercent: 120 });
       gsap.set(paragraphSplit.words, { yPercent: 120 });
@@ -29,8 +28,7 @@ export default function Hero() {
         if (cancelled) return;
 
         const tl = gsap.timeline({ defaults: { ease: 'circ.out' } });
-        tl.to(bgWrapperRef.current, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 0)
-          .to(logoRef.current, { y: 0, opacity: 1, duration: 1.5, ease: 'power2.out' }, 0.1)
+        tl.to(logoRef.current, { y: 0, opacity: 1, duration: 1.5, ease: 'power2.out' }, 0.1)
           .to(titleSplit.words, { yPercent: 0, duration: 1, stagger: 0.5 }, 0.15)
           .to(
             paragraphSplit.words,
