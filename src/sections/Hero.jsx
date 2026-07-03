@@ -91,17 +91,19 @@ export default function Hero() {
               <source
                 media="(max-width: 767px)"
                 srcSet="/images/hero-mobile.webp"
-                width="828"
-                height="1104"
+                width="900"
+                height="1601"
               />
               <img
                 src="/images/hero.webp"
+                srcSet="/images/hero.webp 1920w, /images/hero-2x.webp 2500w"
+                sizes="100vw"
                 alt="house with garden at night"
                 className="hero_bg-image"
                 fetchPriority="high"
                 decoding="async"
-                width="1600"
-                height="900"
+                width="1920"
+                height="1080"
               />
             </picture>
             <div className="hero_bg-image-overlay" />
