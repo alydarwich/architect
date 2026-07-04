@@ -85,7 +85,7 @@ export default function Footer() {
                   </a>
                   <div className="footer_contact-icons-wrapper">
                     <a
-                      href="https://www.facebook.com/profile.php?id=100067760890428"
+                      href="https://www.google.com/"
                       target="_blank"
                       rel="noreferrer"
                       className="footer_contact-link-wrapper"
@@ -96,7 +96,7 @@ export default function Footer() {
                       </div>
                     </a>
                     <a
-                      href="https://www.instagram.com/site_cr/"
+                      href="https://www.google.com/"
                       target="_blank"
                       rel="noreferrer"
                       className="footer_contact-link-wrapper"
@@ -107,7 +107,7 @@ export default function Footer() {
                       </div>
                     </a>
                     <a
-                      href="https://www.linkedin.com/company/sitearchitecture/"
+                      href="https://www.google.com/"
                       target="_blank"
                       rel="noreferrer"
                       className="footer_contact-link-wrapper"
@@ -135,19 +135,7 @@ export default function Footer() {
                 <div className="spacer-small" />
 
                 <div className="footer_designed-by-wrapper">
-                  <div className="footer_text">Design &amp; Development by</div>
-                  <a
-                    href="https://www.johannesfraundorfer.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="footer_jf-link"
-                  >
-                    <img
-                      src="/svg/jf-logo-white.svg"
-                      alt="johannes fraundorfer logo"
-                      className="footer_jf-logo"
-                    />
-                  </a>
+                  <div className="footer_text">Design &amp; Development by Ali Darwish</div>
                 </div>
               </div>
             </div>
