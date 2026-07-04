@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import { gsap, ScrollTrigger } from '../lib/gsap.js';
 import './Expertise.css';

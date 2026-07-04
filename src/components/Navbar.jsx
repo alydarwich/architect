@@ -1,5 +1,7 @@
+'use client';
+
 import { useLayoutEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { gsap } from '../lib/gsap.js';
 import { introPromise } from '../lib/introSignal.js';
 import './Navbar.css';
@@ -27,7 +29,7 @@ export default function Navbar() {
     <nav className="navbar" ref={navRef}>
       <div className="padding-global">
         <div className="navbar_content-wrapper">
-          <Link to="/" className="navbar_logo-wrapper">
+          <Link href="/" className="navbar_logo-wrapper">
             <img src="/svg/site-logo.svg" alt="SITE Logo" className="navbar_logo" />
           </Link>
           <div className="navbar_menu-wrapper">

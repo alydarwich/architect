@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './Footer.css';
 
 const FacebookIcon = () => (
@@ -124,10 +124,10 @@ export default function Footer() {
 
                 <div className="footer_credits-wrapper">
                   <div className="footer_text">2023 SITE Architecture. All rights reserved.</div>
-                  <Link to="/terms-conditions" className="footer-link">
+                  <Link href="/terms-conditions" className="footer-link">
                     Terms &amp; Conditions
                   </Link>
-                  <Link to="/privacy-policy" className="footer-link">
+                  <Link href="/privacy-policy" className="footer-link">
                     Privacy Policy
                   </Link>
                 </div>

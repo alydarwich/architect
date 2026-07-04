@@ -1,5 +1,5 @@
 /*
- * Self-hosted fonts (bundled by Vite from @fontsource).
+ * Self-hosted fonts (files copied from @fontsource into /public/fonts).
  * font-display: block avoids the fallback -> webfont swap that reflows the big
  * hero headings (our main source of layout shift). The preloader covers the
  * short block period, so no invisible-text flash is ever seen.
@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: block;
-  src: url('../node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2') format('woff2');
+  src: url('/fonts/poppins-latin-600-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: block;
-  src: url('../node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff2') format('woff2');
+  src: url('/fonts/poppins-latin-700-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: block;
-  src: url('../node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2') format('woff2');
+  src: url('/fonts/poppins-latin-800-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -34,7 +34,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url('../node_modules/@fontsource/poppins/files/poppins-latin-900-normal.woff2') format('woff2');
+  src: url('/fonts/poppins-latin-900-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -42,6 +42,6 @@
   font-style: normal;
   font-weight: 400 700;
   font-display: block;
-  src: url('../node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2')
+  src: url('/fonts/montserrat-latin-wght-normal.woff2')
     format('woff2-variations');
 }

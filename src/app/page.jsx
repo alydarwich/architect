@@ -9,7 +9,7 @@ import CoCreate from '../sections/CoCreate.jsx';
 import Expertise from '../sections/Expertise.jsx';
 import Formula from '../sections/Formula.jsx';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="main-wrapper">
       <Preloader />

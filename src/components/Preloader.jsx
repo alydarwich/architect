@@ -1,3 +1,5 @@
+'use client';
+
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from '../lib/gsap.js';
 import { completeIntro, isIntroResolved } from '../lib/introSignal.js';

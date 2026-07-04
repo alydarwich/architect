@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 import SplitType from 'split-type';
 import { gsap, ScrollTrigger } from '../lib/gsap.js';

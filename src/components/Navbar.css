@@ -8,6 +8,10 @@
   mix-blend-mode: exclusion;
   background-color: transparent;
   pointer-events: none;
+  /* Start hidden to match the GSAP intro (yPercent: -100 set on mount). With
+     SSR the markup is sent pre-hydration, so this avoids a one-frame flash of
+     the navbar before the reveal animation takes over. */
+  transform: translateY(-100%);
 }
 
 .navbar_content-wrapper {

@@ -1,16 +1,24 @@
-# React + Vite
+# SITE Architecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Marketing site for SITE Architecture, built with [Next.js](https://nextjs.org/)
+(App Router) and React. Animations use GSAP + ScrollTrigger, smooth scrolling
+via Lenis, and heading splits via SplitType.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm run dev` — start the dev server (http://localhost:3000)
+- `npm run build` — production build
+- `npm run start` — serve the production build
+- `npm run lint` — run Oxlint
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- `src/app` — App Router routes: `/` (home), `/privacy-policy`,
+  `/terms-conditions`, plus a catch-all that redirects unknown paths home.
+  `layout.jsx` holds `<head>`/metadata + hero preloads; `AppShell.jsx` is the
+  client shell (smooth scroll, navbar, footer).
+- `src/sections` — home page sections (all client components).
+- `src/components` — navbar, footer, preloader, cursor glow, legal page shell.
+- `src/lib` — GSAP setup, Lenis provider, intro signal.
+- `src/content` — raw HTML for the legal pages (read at build time).
+- `public` — images, SVGs, and self-hosted fonts (`public/fonts`).
