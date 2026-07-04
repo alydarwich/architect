@@ -31,7 +31,7 @@ export default function Navbar() {
             <img src="/svg/site-logo.svg" alt="SITE Logo" className="navbar_logo" />
           </Link>
           <div className="navbar_menu-wrapper">
-            <a href="mailto:info@site-cr.com" className="navbar_button">
+            <a href="mailto:alyydarwich@gmail.com" className="navbar_button">
               <span className="navbar_button-text">Contact</span>
             </a>
           </div>

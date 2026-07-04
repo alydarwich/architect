@@ -78,7 +78,7 @@ export default function Hero() {
               purposeful spaces for brands, people and places.
             </p>
             <div className="spacer-medium" />
-            <a href="mailto:info@site-cr.com" className="hero_primary-button" ref={buttonRef}>
+            <a href="mailto:alyydarwich@gmail.com" className="hero_primary-button" ref={buttonRef}>
               <span className="primary-button_icon-wrapper">
                 <img src="/svg/cta-arrow.svg" alt="" className="primary-button_arrow-icon" />
               </span>

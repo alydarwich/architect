@@ -55,8 +55,8 @@ export default function Footer() {
                       Contact us and together we will create your dream project beyond just
                       aesthetics.
                     </div>
-                    <a href="mailto:info@site-cr.com" className="footer_email-link">
-                      info@site-cr.com
+                    <a href="mailto:alyydarwich@gmail.com" className="footer_email-link">
+                      alyydarwich@gmail.com
                     </a>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ export default function Footer() {
                 <div className="spacer-medium" />
 
                 <div className="footer_contact-grid">
-                  <a href="mailto:info@site-cr.com" className="footer_contact-link">
+                  <a href="mailto:alyydarwich@gmail.com" className="footer_contact-link">
                     <div className="footer_contact-link-text">Email Us</div>
                     <div className="footer_contact-underline-wrapper">
                       <div className="footer_contact-underline" />
@@ -72,7 +72,7 @@ export default function Footer() {
                     </div>
                   </a>
                   <a
-                    href="https://calendly.com/sitearchitecture/gettoknow"
+                    href="https://www.google.com/"
                     target="_blank"
                     rel="noreferrer"
                     className="footer_contact-link"
